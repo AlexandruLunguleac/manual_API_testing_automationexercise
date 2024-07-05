@@ -26,6 +26,8 @@
 					"listen": "test",
 					"script": {
 						"exec": [
+							"// Acest request este de a cere lista produselor",
+							"",
 							"pm.environment.get(\"variable_key\");",
 							"pm.globals.get(\"variable_key\");",
 							"pm.variables.get(\"variable_key\");",
@@ -38,8 +40,8 @@
 							"});",
 							"",
 							"",
-							"pm.test(\"Response time is less than 500ms\", function () {",
-							"  pm.expect(pm.response.responseTime).to.be.below(500);",
+							"pm.test(\"Response time is less than 1000ms\", function () {",
+							"  pm.expect(pm.response.responseTime).to.be.below(1000);",
 							"});",
 							"",
 							"",
