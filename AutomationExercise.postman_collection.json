@@ -1,0 +1,584 @@
+{
+	"info": {
+		"_postman_id": "60e3223a-3d67-46e2-95c5-e23161b74b68",
+		"name": "AutomationExercise",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "32691337"
+	},
+	"item": [
+		{
+			"name": "GET All Products",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Acest request este de a cere lista produselor\r",
+							"\r",
+							"pm.environment.get(\"variable_key\");\r",
+							"pm.globals.get(\"variable_key\");\r",
+							"pm.variables.get(\"variable_key\");\r",
+							"pm.collectionVariables.get(\"variable_key\");\r",
+							"\r",
+							"\r",
+							"\r",
+							"pm.test(\"Response status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test(\"Response time is less than 1000ms\", function () {\r",
+							"  pm.expect(pm.response.responseTime).to.be.below(1000);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test(\"Validate the structure of the products array\", function () {\r",
+							"    const responseData = pm.response.json();\r",
+							"    \r",
+							"    pm.expect(responseData.products).to.be.an('array').and.to.have.lengthOf.at.least(1, \"Array should not be empty\");\r",
+							"    \r",
+							"    responseData.products.forEach(function(product) {\r",
+							"        pm.expect(product).to.have.property('id');\r",
+							"        pm.expect(product).to.have.property('name');\r",
+							"        pm.expect(product).to.have.property('price');\r",
+							"        pm.expect(product).to.have.property('brand');\r",
+							"        pm.expect(product).to.have.property('category');\r",
+							"    });\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test(\"Usertype and category fields within category object are not empty strings\", function () {\r",
+							"  const responseData = pm.response.json();\r",
+							"  \r",
+							"  pm.expect(responseData).to.be.an('object');\r",
+							"  pm.expect(responseData.products).to.be.an('array');\r",
+							"  \r",
+							"  responseData.products.forEach(function(product) {\r",
+							"    pm.expect(product.category).to.be.an('object');\r",
+							"    pm.expect(product.category.usertype.usertype).to.not.equal('', \"Usertype should not be empty\");\r",
+							"    pm.expect(product.category.category).to.not.equal('', \"Category should not be empty\");\r",
+							"  });\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test(\"Verify that responseCode is present and is of type number\", function () {\r",
+							"    const responseData = pm.response.json();\r",
+							"    \r",
+							"    pm.expect(responseData).to.have.property('responseCode').that.is.a('number');\r",
+							"});\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "https://automationexercise.com/api/productsList"
+			},
+			"response": []
+		},
+		{
+			"name": "POST Products List",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Acest request de POST este pentru a cere lista de produse cu informatii in plus.\r",
+							"\r",
+							"pm.environment.set(\"variable_key\", \"variable_value\");\r",
+							"pm.globals.set(\"variable_key\", \"variable_value\");\r",
+							"pm.collectionVariables.set(\"variable_key\", \"variable_value\");\r",
+							"\r",
+							"pm.test(\"Response status code is 200\", function () {\r",
+							"  pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response time is within an acceptable range\", function () {\r",
+							"  pm.expect(pm.response.responseTime).to.be.below(1000);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response has the correct Content-Type header\", function () {\r",
+							"    pm.expect(pm.response.headers.get(\"Content-Type\")).to.include(\"text/html\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Validate the HTML schema of the response\", function () {\r",
+							"    // No specific tests for HTML schema\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": "https://automationexercise.com/api/productsList"
+			},
+			"response": []
+		},
+		{
+			"name": "PUT All Brands",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Acest request the PUT este folosit pentru a trimite date catre server pentru crearea sau modificarea unei resurse.\r",
+							"\r",
+							"pm.environment.get(\"variable_key\");\r",
+							"pm.environment.set(\"variable_key\", \"variable_value\");\r",
+							"pm.globals.get(\"variable_key\");\r",
+							"pm.globals.set(\"variable_key\", \"variable_value\");\r",
+							"pm.collectionVariables.get(\"variable_key\");\r",
+							"pm.collectionVariables.set(\"variable_key\", \"variable_value\");\r",
+							"\r",
+							"\r",
+							"pm.test(\"Response status code is 200\", function () {\r",
+							"    pm.expect(pm.response.code).to.equal(200);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": "https://automationexercise.com/api/brandsList"
+			},
+			"response": []
+		},
+		{
+			"name": "GET All Brands List",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Acest request este folosit pentru a cere lista cu toate brand-urile.\r",
+							"\r",
+							"\r",
+							"pm.test(\"Response status code is 200\", function () {\r",
+							"  pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test(\"Response time is less than 1000ms\", function () {\r",
+							"  pm.expect(pm.response.responseTime).to.be.below(1000);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test(\"Presence of responseCode and brands fields\", function () {\r",
+							"    const responseData = pm.response.json();\r",
+							"    \r",
+							"    pm.expect(responseData).to.be.an('object');\r",
+							"    pm.expect(responseData).to.have.property('responseCode');\r",
+							"    pm.expect(responseData).to.have.property('brands');\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test(\"Id and brand are present in each object within the brands array\", function () {\r",
+							"    const responseData = pm.response.json();\r",
+							"    \r",
+							"    pm.expect(responseData.brands).to.be.an('array').that.is.not.empty;\r",
+							"    responseData.brands.forEach(function(brand) {\r",
+							"        pm.expect(brand).to.have.property('id');\r",
+							"        pm.expect(brand).to.have.property('brand');\r",
+							"    });\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test(\"Id is a non-negative integer and brand is a non-empty string\", function () {\r",
+							"  const responseData = pm.response.json();\r",
+							"  \r",
+							"  pm.expect(responseData).to.be.an('object');\r",
+							"  \r",
+							"  responseData.brands.forEach(function(brand) {\r",
+							"    pm.expect(brand.id).to.be.a('number').and.to.satisfy((val) => val >= 0, \"Id should be a non-negative integer\");\r",
+							"    pm.expect(brand.brand).to.be.a('string').and.to.have.lengthOf.at.least(1, \"Brand should be a non-empty string\");\r",
+							"  });\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "https://automationexercise.com/api/brandsList"
+			},
+			"response": []
+		},
+		{
+			"name": "POST to Search Product",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Acest request a fost folosit pentru a cauta un produs anume.\r",
+							"\r",
+							"pm.environment.get(\"variable_key\");\r",
+							"pm.globals.get(\"variable_key\");\r",
+							"pm.variables.get(\"variable_key\");\r",
+							"pm.collectionVariables.get(\"variable_key\");\r",
+							"pm.environment.set(\"variable_key\", \"variable_value\");\r",
+							"pm.globals.set(\"variable_key\", \"variable_value\");\r",
+							"pm.collectionVariables.set(\"variable_key\", \"variable_value\");\r",
+							"pm.sendRequest(\"https://postman-echo.com/get\", function (err, response) {\r",
+							"    console.log(response.json());\r",
+							"});\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://automationexercise.com/api/searchProduct?search_product=top",
+					"protocol": "https",
+					"host": [
+						"automationexercise",
+						"com"
+					],
+					"path": [
+						"api",
+						"searchProduct"
+					],
+					"query": [
+						{
+							"key": "search_product",
+							"value": "top"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TO SEARCH PRODUCT without search_product parameter",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Acest request este pentru a cauta un produs fara parametrul search_product.\r",
+							"\r",
+							"pm.environment.get(\"variable_key\");\r",
+							"pm.globals.get(\"variable_key\");\r",
+							"pm.variables.get(\"variable_key\");\r",
+							"pm.collectionVariables.get(\"variable_key\");\r",
+							"pm.globals.set(\"variable_key\", \"variable_value\");\r",
+							"pm.environment.set(\"variable_key\", \"variable_value\");\r",
+							"pm.collectionVariables.set(\"variable_key\", \"variable_value\");\r",
+							"pm.sendRequest(\"https://postman-echo.com/get\", function (err, response) {\r",
+							"    console.log(response.json());\r",
+							"});\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": "https://automationexercise.com/api/searchProduct"
+			},
+			"response": []
+		},
+		{
+			"name": "Verify Login without e-mail parameter",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Acest request este pentru a verifica daca merge login fara parametrul de e-mail.\r",
+							"\r",
+							"pm.environment.get(\"variable_key\");\r",
+							"pm.globals.get(\"variable_key\");\r",
+							"pm.variables.get(\"variable_key\");\r",
+							"pm.collectionVariables.get(\"variable_key\");\r",
+							"pm.environment.set(\"variable_key\", \"variable_value\");\r",
+							"pm.globals.set(\"variable_key\", \"variable_value\");\r",
+							"pm.collectionVariables.set(\"variable_key\", \"variable_value\");\r",
+							"pm.sendRequest(\"https://postman-echo.com/get\", function (err, response) {\r",
+							"    console.log(response.json());\r",
+							"});\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://automationexercise.com/api/verifyLogin?password=password",
+					"protocol": "https",
+					"host": [
+						"automationexercise",
+						"com"
+					],
+					"path": [
+						"api",
+						"verifyLogin"
+					],
+					"query": [
+						{
+							"key": "password",
+							"value": "password"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "To Verify Login",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Acest request fusese pentru a verifica daca functioneaza login-ul.\r",
+							"\r",
+							"pm.environment.get(\"variable_key\");\r",
+							"pm.globals.get(\"variable_key\");\r",
+							"pm.variables.get(\"variable_key\");\r",
+							"pm.collectionVariables.get(\"variable_key\");\r",
+							"pm.environment.set(\"variable_key\", \"variable_value\");\r",
+							"pm.globals.set(\"variable_key\", \"variable_value\");\r",
+							"pm.collectionVariables.set(\"variable_key\", \"variable_value\");\r",
+							"pm.environment.unset(\"variable_key\");\r",
+							"pm.globals.unset(\"variable_key\");\r",
+							"pm.collectionVariables.unset(\"variable_key\");\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "https://automationexercise.com/api/verifyLogin"
+			},
+			"response": []
+		},
+		{
+			"name": "To CREATE AND REGISTER USER ACCOUNT",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Acest request este pentru a crea si inregistra un cont de utilizator.\r",
+							"\r",
+							"pm.environment.get(\"variable_key\");\r",
+							"pm.globals.get(\"variable_key\");\r",
+							"pm.variables.get(\"variable_key\");\r",
+							"pm.collectionVariables.get(\"variable_key\");\r",
+							"pm.environment.set(\"variable_key\", \"variable_value\");\r",
+							"pm.globals.set(\"variable_key\", \"variable_value\");\r",
+							"pm.collectionVariables.set(\"variable_key\", \"variable_value\");\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://automationexercise.com/api/createAccount?name=test&email=test@example.com&password=password&title=Mr.&birth_date=19 &birth_month=August&birth_year=2000&firstname=Tester Name&lastname=Tester Lastname&company=Test&address1=test address&address2=secondary test address&country=testcountry&zipcode=12345&state=Test State&City=Test City&mobile_number=1234567890",
+					"protocol": "https",
+					"host": [
+						"automationexercise",
+						"com"
+					],
+					"path": [
+						"api",
+						"createAccount"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "test"
+						},
+						{
+							"key": "email",
+							"value": "test@example.com"
+						},
+						{
+							"key": "password",
+							"value": "password"
+						},
+						{
+							"key": "title",
+							"value": "Mr."
+						},
+						{
+							"key": "birth_date",
+							"value": "19 "
+						},
+						{
+							"key": "birth_month",
+							"value": "August"
+						},
+						{
+							"key": "birth_year",
+							"value": "2000"
+						},
+						{
+							"key": "firstname",
+							"value": "Tester Name"
+						},
+						{
+							"key": "lastname",
+							"value": "Tester Lastname"
+						},
+						{
+							"key": "company",
+							"value": "Test"
+						},
+						{
+							"key": "address1",
+							"value": "test address"
+						},
+						{
+							"key": "address2",
+							"value": "secondary test address"
+						},
+						{
+							"key": "country",
+							"value": "testcountry"
+						},
+						{
+							"key": "zipcode",
+							"value": "12345"
+						},
+						{
+							"key": "state",
+							"value": "Test State"
+						},
+						{
+							"key": "City",
+							"value": "Test City"
+						},
+						{
+							"key": "mobile_number",
+							"value": "1234567890"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET USER ACCOUNT DETAIL BY EMAIL",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Acest request este pentru a obtine detalii despre un cont de utilizator dupa e-mail.\r",
+							"\r",
+							"pm.test(\"Response status code is 200\", function () {\r",
+							"  pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Content-Type is application/json\", function () {\r",
+							"    pm.expect(pm.response.headers.get(\"Content-Type\")).to.include(\"application/json\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response has the required fields\", function () {\r",
+							"    const responseData = pm.response.json();\r",
+							"    \r",
+							"    pm.expect(responseData).to.be.an('object');\r",
+							"    pm.expect(responseData.user).to.have.all.keys('id', 'name', 'email', 'title', 'birth_day', 'birth_month', 'birth_year', 'first_name', 'last_name', 'company', 'address1', 'address2', 'country', 'state', 'city', 'zipcode');\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Email is in a valid format\", function () {\r",
+							"  const responseData = pm.response.json();\r",
+							"  const email = responseData.user.email;\r",
+							"\r",
+							"  pm.expect(email).to.match(/^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response time is less than 1000ms\", function () {\r",
+							"  pm.expect(pm.response.responseTime).to.be.below(1000);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://automationexercise.com/api/getUserDetailByEmail?email",
+					"protocol": "https",
+					"host": [
+						"automationexercise",
+						"com"
+					],
+					"path": [
+						"api",
+						"getUserDetailByEmail"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "variable_key",
+			"value": ""
+		}
+	]
+}
