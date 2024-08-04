@@ -24,11 +24,11 @@ This request it is composed from request method, which defines the type of actio
    -Id is a non-negative integer and brand is a non-empty string.
    
 5. POST to Search Product – HTTP Response code 400 "Bad request, name parameter is missing in POST request.", which means that the request wasn't done successfully because the server didn't understand the request due to bad syntax.
-6. POST to search product without search_product parameter – HTTP Response code 400 "Bad request, name parameter is missing in POST request.", which means that the request wasn't done successfully because the server didn't understand the request due to bad syntax.
-7. POST Verify Login without e-mail parameter – HTTP Response code 400 "Bad request, name parameter is missing in POST request.", which means that the request wasn't done successfully because the server didn't understand the request due to bad syntax.
+6. POST to Search Product without search_product parameter – HTTP Response code 400 "Bad request, name parameter is missing in POST request.", which means that the request wasn't done successfully because the server didn't understand the request due to bad syntax.
+7. POST to Verify Login without e-mail parameter – HTTP Response code 400 "Bad request, name parameter is missing in POST request.", which means that the request wasn't done successfully because the server didn't understand the request due to bad syntax.
 8. DELETE To Verify Login – HTTP Response code 405 "This request method is not supported.", which means that the request wasn't done successfully because we tried to use a HTTP method which was unsupported by the server.
-9. POST To CREATE AND REGISTER USER ACCOUNT - HTTP Response code 400 "Bad request, name parameter is missing in POST request.", which means that the request wasn't done successfully because the server didn't understand the request due to bad syntax.
-10. GET USER ACCOUNT DETAIL BY E-MAIL - HTTP Response code 200 OK, which means that request was done successfully, returning the user account details by e-mail address.
+9. POST To Create and Register User Account - HTTP Response code 400 "Bad request, name parameter is missing in POST request.", which means that the request wasn't done successfully because the server didn't understand the request due to bad syntax.
+10. GET User Account Detail by E-mail - HTTP Response code 200 OK, which means that request was done successfully, returning the user account details by e-mail address.
 
 
 
