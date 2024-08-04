@@ -273,7 +273,7 @@
 			"response": []
 		},
 		{
-			"name": "TO SEARCH PRODUCT without search_product parameter",
+			"name": "POST to Search Product without search_product parameter",
 			"event": [
 				{
 					"listen": "test",
@@ -309,7 +309,7 @@
 			"response": []
 		},
 		{
-			"name": "Verify Login without e-mail parameter",
+			"name": "POST to Verify Login without e-mail parameter",
 			"event": [
 				{
 					"listen": "test",
@@ -362,7 +362,7 @@
 			"response": []
 		},
 		{
-			"name": "To Verify Login",
+			"name": "DELETE To Verify Login",
 			"event": [
 				{
 					"listen": "test",
@@ -397,7 +397,7 @@
 			"response": []
 		},
 		{
-			"name": "To CREATE AND REGISTER USER ACCOUNT",
+			"name": "POST to Create and Register User Account",
 			"event": [
 				{
 					"listen": "test",
@@ -510,7 +510,7 @@
 			"response": []
 		},
 		{
-			"name": "GET USER ACCOUNT DETAIL BY EMAIL",
+			"name": "GET User Account Detail by E-mail",
 			"event": [
 				{
 					"listen": "test",
