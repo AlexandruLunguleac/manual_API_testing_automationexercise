@@ -87,6 +87,10 @@ Also I run the collection and I got the following results at the execution repor
 ![image](https://github.com/user-attachments/assets/a992cdce-5a60-40ca-9d15-d6c9668c9e9b)
 ![image](https://github.com/user-attachments/assets/848e5a79-fc6b-4aec-96ee-8c80774c4fb6)
 ![image](https://github.com/user-attachments/assets/f222f21a-fa9f-4c7d-8659-64a723449e55)
+![image](https://github.com/user-attachments/assets/5a086f81-5616-47c0-880e-67ebbf47d76c)
+![image](https://github.com/user-attachments/assets/6e314260-fa9a-415c-94b6-560a281aa314)
+![image](https://github.com/user-attachments/assets/af9d6666-0463-4ed1-b258-d41b65bed126)
+![image](https://github.com/user-attachments/assets/296a8076-ba13-4cfe-bc41-d97615aaacb0)
 
 
 
