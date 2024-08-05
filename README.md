@@ -3,6 +3,7 @@ This repository contains my final project for the Programmer's Assistant accredi
 The final project is testing an API (Application Programming Interface) via the Postman application.
 
 Site used for testing: https://www.automationexercise.com/#google_vignette
+
 API List of the site used for testing: https://www.automationexercise.com/api_list
 
 Performed tests:
