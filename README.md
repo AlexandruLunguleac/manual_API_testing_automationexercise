@@ -81,6 +81,7 @@ This request it is composed from request method, which defines the type of actio
    ![image](https://github.com/user-attachments/assets/2a0743f9-605d-48a4-9934-eb9f2d3f4360)
 
 Also I run the collection and I got the following results at the execution report:
+Summary view of the execution report:
 ![image](https://github.com/user-attachments/assets/424bbd17-07d7-41dc-9efd-d385962e3ab6)
 ![image](https://github.com/user-attachments/assets/ca9f4d66-2508-45d5-8198-8309890a3f55)
 ![image](https://github.com/user-attachments/assets/554ac139-8cc4-47dd-816b-6ebd19bda386)
@@ -91,6 +92,10 @@ Also I run the collection and I got the following results at the execution repor
 ![image](https://github.com/user-attachments/assets/6e314260-fa9a-415c-94b6-560a281aa314)
 ![image](https://github.com/user-attachments/assets/af9d6666-0463-4ed1-b258-d41b65bed126)
 ![image](https://github.com/user-attachments/assets/296a8076-ba13-4cfe-bc41-d97615aaacb0)
+Results view of the execution report:
+![image](https://github.com/user-attachments/assets/3e7ddb38-5370-4210-af75-eab5be1a54ee)
+![image](https://github.com/user-attachments/assets/be350a2c-fa08-4e3e-afcb-06b1c780d78c)
+![image](https://github.com/user-attachments/assets/fbb312e8-0569-4183-bdc8-ca1e41ce695d)
 
 Also we had 3 bugs, of which 2 of them were fixed, as we can see in the screenshots from Jira.
 ![image](https://github.com/user-attachments/assets/17b9a6fd-bf70-44ec-95ad-95e2da7c55c0)
@@ -99,7 +104,7 @@ Also we had 3 bugs, of which 2 of them were fixed, as we can see in the screensh
 ![image](https://github.com/user-attachments/assets/6ff5cb5c-af3e-441f-a472-d042b19dcf7f)
 ![image](https://github.com/user-attachments/assets/2af46d37-bdec-43d1-ad20-57ace9d504a7)
 
-
-
-
+Conclusions:
+10 requests were sent to the server, and we executed 25 JavaScript tests, of which only 23 of them executed without errors.
+We found and reported 3 bugs, 2 of Medium priority and one of High priority, and also we fixed 2 of the reported bugs.
 
