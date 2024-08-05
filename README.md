@@ -80,6 +80,13 @@ This request it is composed from request method, which defines the type of actio
    ![image](https://github.com/user-attachments/assets/0af37b3f-ce98-4a18-a57a-a7e780e67b30)
    ![image](https://github.com/user-attachments/assets/2a0743f9-605d-48a4-9934-eb9f2d3f4360)
 
+Also I run the collection and I got the following results at the execution report:
+![image](https://github.com/user-attachments/assets/424bbd17-07d7-41dc-9efd-d385962e3ab6)
+![image](https://github.com/user-attachments/assets/ca9f4d66-2508-45d5-8198-8309890a3f55)
+![image](https://github.com/user-attachments/assets/554ac139-8cc4-47dd-816b-6ebd19bda386)
+![image](https://github.com/user-attachments/assets/a992cdce-5a60-40ca-9d15-d6c9668c9e9b)
+![image](https://github.com/user-attachments/assets/848e5a79-fc6b-4aec-96ee-8c80774c4fb6)
+![image](https://github.com/user-attachments/assets/f222f21a-fa9f-4c7d-8659-64a723449e55)
 
 
 
