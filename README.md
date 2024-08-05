@@ -106,6 +106,7 @@ Also we had 3 bugs, of which 2 of them were fixed, as we can see in the screensh
 ![image](https://github.com/user-attachments/assets/2af46d37-bdec-43d1-ad20-57ace9d504a7)
 
 Conclusions:
+
 -10 requests were sent to the server, and we executed 25 JavaScript tests, of which only 23 of them executed without errors.
 
 -We found and reported 3 bugs, 2 of Medium priority and one of High priority, and also we fixed 2 of the reported bugs.
