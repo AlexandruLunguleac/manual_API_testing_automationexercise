@@ -92,6 +92,13 @@ Also I run the collection and I got the following results at the execution repor
 ![image](https://github.com/user-attachments/assets/af9d6666-0463-4ed1-b258-d41b65bed126)
 ![image](https://github.com/user-attachments/assets/296a8076-ba13-4cfe-bc41-d97615aaacb0)
 
+Also we had 3 bugs, of which 2 of them were fixed, as we can see in the screenshots from Jira.
+![image](https://github.com/user-attachments/assets/17b9a6fd-bf70-44ec-95ad-95e2da7c55c0)
+![image](https://github.com/user-attachments/assets/eee5ab2e-e8e0-46db-8cbe-451f0b7c5d97)
+![image](https://github.com/user-attachments/assets/3c76b3cf-a057-4fad-b366-fe5b94deb959)
+![image](https://github.com/user-attachments/assets/6ff5cb5c-af3e-441f-a472-d042b19dcf7f)
+![image](https://github.com/user-attachments/assets/2af46d37-bdec-43d1-ad20-57ace9d504a7)
+
 
 
 
